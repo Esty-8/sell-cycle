@@ -93,6 +93,12 @@ DATABASES = {
 }
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-esty8-sellcycle-i8va0mdfyxg.ws-eu116.gitpod.io',  # Gitpod URL
+    'https://sell-app-cycle-f7894996863d.herokuapp.com',  # Heroku app URL
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
