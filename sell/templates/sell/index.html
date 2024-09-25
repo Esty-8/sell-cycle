@@ -1,7 +1,41 @@
 {% extends 'sell/foundation.html' %}
-
+{% load static %}
 
 {% block content %}
- <h2>Front page</h2>
- <p>This is the front page.</p>
+ <h4>Product List</h4>
+
+
+
+
+ {% for product in products %}
+ <div>
+     <h3>{{ product.title }}</h3>
+     <p>{{ product.description }}</p>
+ 
+     <hr>
+ </div>
+ 
+ <div> 
+     <a href="#"> <!-- Linking to the product detail page -->
+         {% if product.image %}
+        
+             <img src="{{ product.image.url }}" alt="{{ product.title }}"> 
+            
+         {% else %}
+            <img src="{% static 'images/default.jpg' %}" alt="Default Image"> <!-- Use a default image if none is available -->
+         {% endif %}
+     </a>
+     
+     <p>Price: {{ product.price }}</p>
+   
+    
+     <hr>
+ </div>
+{% empty %}
+ <p>No products available at the moment.</p>
+ 
+{% endfor %}
+
+    
+    
  {% endblock %}
