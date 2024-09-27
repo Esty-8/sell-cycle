@@ -4,38 +4,29 @@
 {% block content %}
  <h4>Product List</h4>
 
-
-
-
- {% for product in products %}
- <div>
-     <h3>{{ product.title }}</h3>
-     <p>{{ product.description }}</p>
- 
-     <hr>
- </div>
- 
- <div> 
-     <a href="#"> <!-- Linking to the product detail page -->
-         {% if product.image %}
+ {% if products %}
+    {% for product in products %}
+    <div>
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <hr>
+    </div>
+    
+    <div> 
+        <a href="#"> <!-- Linking to the product detail page -->
+            {% if "placeholder" in product.featured_image.url %}
+                <img src="{% static 'images/image.jpg' %}" width="50%" alt="{{ product.title }}"> 
+            {% else %}
+                <img src="{% static 'images/default.jpg' %}" width="50%" alt="Default Image"> <!-- Use a default image if none is available -->
+            {% endif %}
+        </a>
         
-             <img src="{{ product.image.url }}" alt="{{ product.title }}"> 
-            
-         {% else %}
-            <img src="{% static 'images/default.jpg' %}" alt="Default Image"> <!-- Use a default image if none is available -->
-         {% endif %}
-     </a>
-     
-     <p>Price: {{ product.price }}</p>
-   
-    
-     <hr>
- </div>
-{% empty %}
- <p>No products available at the moment.</p>
- 
-{% endfor %}
+        <p>Price: {{ product.price }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+ {% else %}
+    <p>No products available at the moment.</p>
+ {% endif %}
 
-    
-    
- {% endblock %}
+{% endblock %}

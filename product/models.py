@@ -1,5 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
+from cloudinary.models import CloudinaryField
+
+
 
 # Create your models here.
 class Category(models.Model): # Define a Category model with fields for name
@@ -13,6 +16,7 @@ class Product(models.Model): # Define a Product model with fields for name, desc
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE) # links the Product model to the Category model using a foreign key
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True) # in case the product doesn't have a description
+    featured_image = CloudinaryField('image', default='placeholder')
     price = models.FloatField() 
     image = models.ImageField(upload_to='products_images', blank=True, null=True) # to store the product image
     is_sold = models.BooleanField(default=False) # to track if the product has been sold
