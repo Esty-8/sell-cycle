@@ -5,6 +5,14 @@ from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
+class Post(models.Model):
+    featured_image = CloudinaryField(
+        'image',
+        default='placeholder'
+    )
+
+
+
 class Category(models.Model): # Define a Category model with fields for name
     name = models.CharField(max_length=200)
 
@@ -15,8 +23,9 @@ class Category(models.Model): # Define a Category model with fields for name
 class Product(models.Model): # Define a Product model with fields for name, description, and category
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE) # links the Product model to the Category model using a foreign key
     name = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True) # in case the product doesn't have a description
+    featured_image = models.ImageField(upload_to='images/')
     featured_image = CloudinaryField('image', default='placeholder')
+    description = models.TextField(blank=True, null=True) # in case the product doesn't have a description
     price = models.FloatField() 
     image = models.ImageField(upload_to='products_images', blank=True, null=True) # to store the product image
     is_sold = models.BooleanField(default=False) # to track if the product has been sold

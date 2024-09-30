@@ -4,64 +4,31 @@
 {% block content %}
 
 <div class="container">
-    <div class="row align-items-start">
-      <div class="col">
-
-      </div>
-      <div class="col">
-        One of three columns
-      </div>
-      <div class="col">
-        One of three columns
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col">
-        One of three columns
-      </div>
-      <div class="col">
-        One of three columns
-      </div>
-      <div class="col">
-        One of three columns
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
- {% if products %}
-    {% for product in products %}
-    <div>
-        <h3>{{ product.title }}</h3>
-        <p>{{ product.description }}</p>
-        <hr>
-    </div>
-    
-    <div> 
-        <a href="#"> <!-- Linking to the product detail page -->
-            {% if "placeholder" in product.featured_image.url %}
-                <img src="{% static 'images/image.jpg' %}" width="40%" alt="{{ product.title }}"> 
+    <div class="col align-items-start">
+        <div class="col">
+            {% if products %}
+                {% for product in products %}
+                <div class="d-flex align-items-start mb-3">
+                    <a href="#"> <!-- Linking to the product detail page -->
+                        {% if "placeholder" in product.featured_image.url %}
+                            <img src="{% static 'images/default.jpg' %}" width="40%" alt="placeholder image">
+                        {% else %}
+                            <img src="{{ product.featured_image.url }}" width="40%" alt="{{ product.name }}">
+                        {% endif %}
+                    </a>
+                    <div class="ms-2"> <!-- Adjusted margin for spacing -->
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.description }}</p>
+                        <p>Price: {{ product.price }}</p>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
             {% else %}
-                  <img src="{% static 'images/default.jpg' %}" width="40%" alt=" Default Image"> <!-- Use a default image if none is available -->
+                <p>No products available at the moment.</p>
             {% endif %}
-        </a>
-        
-        <p>Price: {{ product.price }}</p>
-        <hr>
+        </div>
     </div>
-    {% endfor %}
- {% else %}
-    <p>No products available at the moment.</p>
- {% endif %}
+</div>
 
 {% endblock %}
