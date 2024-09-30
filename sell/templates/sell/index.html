@@ -2,7 +2,42 @@
 {% load static %}
 
 {% block content %}
- <h4>Product List</h4>
+
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
  {% if products %}
     {% for product in products %}
@@ -15,9 +50,9 @@
     <div> 
         <a href="#"> <!-- Linking to the product detail page -->
             {% if "placeholder" in product.featured_image.url %}
-                <img src="{% static 'images/image.jpg' %}" width="50%" alt="{{ product.title }}"> 
+                <img src="{% static 'images/image.jpg' %}" width="40%" alt="{{ product.title }}"> 
             {% else %}
-                <img src="{% static 'images/default.jpg' %}" width="50%" alt="Default Image"> <!-- Use a default image if none is available -->
+                  <img src="{% static 'images/default.jpg' %}" width="40%" alt=" Default Image"> <!-- Use a default image if none is available -->
             {% endif %}
         </a>
         
