@@ -9,7 +9,7 @@
             {% if products %}
                 {% for product in products %}
                 <div class="d-flex align-items-start mb-3">
-                    <a href="#"> <!-- Linking to the product detail page -->
+                     <!-- Linking to the product detail page -->
                         {% if "placeholder" in product.featured_image.url %}
                             <img src="{% static 'images/default.jpg' %}" width="40%" alt="placeholder image">
                         {% else %}
@@ -21,6 +21,13 @@
                         <p>{{ product.description }}</p>
                         <p>Price: {{ product.price }}</p>
                     </div>
+                </div>
+                <div class="ms-1">
+                     <!-- Linking to the product detail page -->
+                 <a href="{% url 'product:product_information' product.id %}" 
+                 style="color: white; background-color: #007bff; padding: 10px 15px; text-decoration: none; border-radius: 5px;">
+                 More
+             </a>
                 </div>
                 <hr>
                 {% endfor %}
