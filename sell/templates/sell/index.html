@@ -1,5 +1,7 @@
 {% extends 'sell/foundation.html' %}
 {% load static %}
+{% load cloudinary %}
+
 
 {% block content %}
 
@@ -11,9 +13,9 @@
                 <div class="d-flex align-items-start mb-3">
                      <!-- Linking to the product detail page -->
                         {% if "placeholder" in product.featured_image.url %}
-                            <img src="{% static 'images/default.jpg' %}" width="40%" alt="placeholder image">
+                            <img src="{{ product.featured_image.url }}" width="40%" alt="{{ product.name }}">   
                         {% else %}
-                            <img src="{{ product.featured_image.url }}" width="40%" alt="{{ product.name }}">
+                            <img src="{% static 'images/default.jpg' %}" width="40%" alt="placeholder image"> 
                         {% endif %}
                     </a>
                     <div class="ms-2"> <!-- Adjusted margin for spacing -->
