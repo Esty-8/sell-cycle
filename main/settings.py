@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
