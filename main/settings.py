@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -29,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-esty8-sellcycle-i8va0mdfyxg.ws-eu116.gitpod.io',
+ALLOWED_HOSTS = ['8000-esty8-sellcycle-eiy4e7a4ns9.ws-eu116.gitpod.io',
                  '.herokuapp.com'
 ]
 
@@ -141,7 +142,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = 'media/' 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# MEDIA_ROOT = BASE_DIR /'media' # this will create a directory called media 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
