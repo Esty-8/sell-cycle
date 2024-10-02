@@ -4,14 +4,39 @@
 {% block title %}{{ product.name }}{% endblock %}
 
 {% block content %}
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.description }}</p>
-    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
-    {% if product.featured_image %}
-    <img src="{{ product.featured_image.url }}" alt="{{ product.name }}" class="img-fluid">
-    {% else %}
-        <p>No image available.</p>
-    {% endif %}
-    
-    <p class="text-success">Price: {{ product.price }}</p>
+<div class="container my-2">
+    <div class="row">
+        <!-- Left Column for Images -->
+        <div class="mb-3">
+            <!-- Main Product Image -->
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded mb-3 shadow">
+
+            <!-- Featured Image if available -->
+            {% if product.featured_image %}
+                <img src="{{ product.featured_image.url }}" alt="{{ product.name }}" class="img-fluid rounded mb-3 shadow">
+            {% else %}
+                <p class="text-danger">No image available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Right Column for Title and Description -->
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <!-- Product Title -->
+            <h3 class="text-primary font-weight-bold mb-3 display-6">{{ product.name }}</h3>
+
+            <!-- Product Description -->
+            <p class="text-muted">{{ product.description }}</p>
+
+            <!-- Product Price Section -->
+            <p class="h5 text-dark border rounded p-3 bg-light">
+                Price: <span class="text-success">${{ product.price }}</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+        
+
+
 {% endblock %}
