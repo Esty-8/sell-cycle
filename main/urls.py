@@ -19,13 +19,12 @@ from django.urls import path, include
 from django.conf.urls.static import static # Import static files
 
 
-from sell.views import index, contact
+
 
 
 
 urlpatterns = [
-    path('', index, name='index'),  # Redirect to the sell app's index view
-    path('contact/', contact, name='contact'),  # Redirect to the sell app's contact view
+    path('', include('sell.urls')),  # Redirect to the sell app's URLs
     path('product/', include('product.urls')),  # Redirect to the product app's URLs
     path('admin/', admin.site.urls),
 ]
