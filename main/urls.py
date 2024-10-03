@@ -26,6 +26,7 @@ from django.conf.urls.static import static # Import static files
 urlpatterns = [
     path('', include('sell.urls')),  # Redirect to the sell app's URLs
     path('product/', include('product.urls')),  # Redirect to the product app's URLs
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
 ]
 
