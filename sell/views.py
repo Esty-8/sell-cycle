@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from product.models import Category, Product  # Import the Product model
 
+from .forms import SignupForm # Import the Signup
+
+
 # Create your views here.
 def index(request):
     products = Product.objects.filter(is_sold=False)[:6]
@@ -14,3 +17,11 @@ def index(request):
 
 def contact(request):
     return render(request, 'sell/contact.html')
+
+
+def signup(request):
+    form = SignupForm()
+
+    return render(request, 'sell/signup.html' , {
+        'form': form,  # Pass the form instance to the template for display.
+    }) # The signup.html template will be rendered with the form instance.

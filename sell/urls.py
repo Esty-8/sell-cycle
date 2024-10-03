@@ -7,4 +7,5 @@ app_name = 'sell'  # line for namespacing
 urlpatterns = [
     path('', views.index, name='index'),  # Redirect to the sell app's index view
     path('contact/', views.contact, name='contact'),  # Redirect to the sell app's contact view
+    path('signup/', views.signup, name='signup'),  # Redirect to the sell app's signup view
 ]
