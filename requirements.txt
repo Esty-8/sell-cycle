@@ -7,6 +7,7 @@ django-cloudinary-storage==0.3.0
 oauthlib==3.2.2
 gunicorn
 psycopg==3.2.3
+django-crispy-forms==2.3
 PyJWT==2.9.0
 python3-openid==3.2.0
 requests-oauthlib==2.0.0

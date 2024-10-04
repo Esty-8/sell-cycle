@@ -1,5 +1,4 @@
-
-{% load static  %}
+{% extends 'sell/foundation.html' %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -26,3 +25,13 @@
     </a>
 </li>
 {% endif %}
+
+
+{% block content %}
+
+
+{% endblock content%}
+
+{% block footer %}
+
+{% endblock footer%}
