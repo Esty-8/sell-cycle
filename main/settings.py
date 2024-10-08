@@ -23,6 +23,16 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# Cloudinary storage
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'didxdkx4y',
+    'API_KEY': '89478214537628',
+    'API_SECRET': 'r18OwJTwWJ4mRBCNGX0RieDB',
+}
+
+# Setting Cloudinary as the default storage for media files
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -32,7 +42,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-esty8-sellcycle-eiy4e7a4ns9.ws-eu116.gitpod.io',
+ALLOWED_HOSTS = ['8000-esty8-sellcycle-4zqs8fxqllc.ws-eu116.gitpod.io',
                  '.herokuapp.com'
 ]
 
