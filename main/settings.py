@@ -24,11 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Cloudinary storage
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'didxdkx4y',
-    'API_KEY': '89478214537628',
-    'API_SECRET': 'r18OwJTwWJ4mRBCNGX0RieDB',
-}
+
 
 # Setting Cloudinary as the default storage for media files
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -46,6 +42,9 @@ ALLOWED_HOSTS = ['8000-esty8-sellcycle-4zqs8fxqllc.ws-eu116.gitpod.io',
                  '.herokuapp.com'
 ]
 
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -123,7 +122,7 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-esty8-sellcycle-eiy4e7a4ns9.ws-eu116.gitpod.io',  # Gitpod URL
+    'https://8000-esty8-sellcycle-4zqs8fxqllc.ws-eu116.gitpod.io',  # Gitpod URL
     'https://sell-app-cycle-f7894996863d.herokuapp.com',  # Heroku app URL
 ]
 
