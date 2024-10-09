@@ -29,7 +29,7 @@ class Product(models.Model): # Define a Product model with fields for name, desc
     price = models.FloatField() 
     is_sold = models.BooleanField(default=False) # to track if the product has been sold
     created_at = models.DateTimeField(auto_now_add=True) # automatically set the created_at field to the current date and time when the product is created
-    created_at = models.ForeignKey(User, related_name='products', on_delete=models.CASCADE) # links the Product model to the Username model using a foreign key
+    created_by = models.ForeignKey(User, related_name='products', on_delete=models.CASCADE) # links the Product model to the Username model using a foreign key
 
     def __str__(self):
         return self.name
