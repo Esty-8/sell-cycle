@@ -23,7 +23,7 @@ class Category(models.Model): # Define a Category model with fields for name
 class Product(models.Model): # Define a Product model with fields for name, description, and category
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE) # links the Product model to the Category model using a foreign key
     name = models.CharField(max_length=200)
-    featured_image = CloudinaryField('Feature Image', default='placeholder') # <--------
+    featured_image = CloudinaryField('featured_image', default='placeholder') # <--------
     description = models.TextField(blank=True, null=True) # in case the product doesn't have a description
     image = CloudinaryField('image', blank=True, null=True)  # Use CloudinaryField #
     price = models.FloatField() 

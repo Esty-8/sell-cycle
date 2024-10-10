@@ -3,7 +3,7 @@ from django import forms
 from .models import Product
 
 
-class ProductForm(forms.ModelForm):
+class NewProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['name', 'description', 'price', 'image', 'category']
+        fields = ['featured_image','image', 'name', 'description', 'price', 'category']
