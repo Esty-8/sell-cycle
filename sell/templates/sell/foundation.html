@@ -16,54 +16,44 @@
   </head>
   <body>
       <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #bce1fb;">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bce1fb;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SellCycle</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="{% url 'product:new_product' %}">New item</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Catalogue
-                </a>
-                <ul class="dropdown-menu active" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item active" href="#">Clothes</a></li>
-                  <li><a class="dropdown-item active" href="#">Accesories</a></li>
-                  <li><hr class="dropdown-item active">Furniture</li>
-                  <li><a class="dropdown-item active" href="#">Toys</a></li>
+            <a class="navbar-brand" href="{% url 'sell:index' %}">SellCycle</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+                    <!-- This link is visible to everyone -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'catalogue:index' %}">Catalogue</a>
+                    </li>
+    
+                    <!-- If the user is not authenticated, show the "Login" and "SignUp" links -->
+                    {% if not request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'sell:signup' %}">SignUp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'sell:login' %}">Login</a>
+                        </li>
+                    {% else %}
+                        <!-- If the user is authenticated, show the "New item" link -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'product:new_product' %}">Add Products</a>
+                        </li>
+                    {% endif %}
+    
                 </ul>
-              </li>
-              {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Inbox</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">More</a>
-              </li>   
-                {% else %}
-              <li class="nav-item">
-                <a class="nav-link active" href="{% url 'sell:signup' %}">SignUp</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'sell:login' %}">Login</a>
-              </li>   
-            {% endif %}          
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-info" type="submit">Search</button>
-            </form>
-          </div>
+     
+                <!-- Search form -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
-
- 
+    </nav>
     {% block content %}
+
     {% endblock %}
 
   <!-- Footer -->
