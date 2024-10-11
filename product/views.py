@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 from .models import Product  # Import the Product model
-from .forms import NewProductForm # Import the NewProduct
+from .forms import NewProductForm, EditProductForm # Import the NewProduct
 
 
 
@@ -45,13 +45,39 @@ def new_product(request):
     })
 
 
+
+
+@login_required
+def edit(request, pk):
+    product = get_object_or_404(Product, pk=pk, created_by=request.user)
+
+    if request.method == 'POST':
+        form = EditProductForm(request.POST, request.FILES, instance=product)  # Handle file upload (images)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('product:product_information', pk=product.id)  # Redirect to the product listed
+            
+    else:
+        form = EditProductForm(instance=product)  # If GET request, display an empty form
+
+    return render(request, 'product/form.html', {
+        'form': form,
+        'title': 'Edit Product',
+    })
+
+
+
+
+
+
 @login_required
 def delete(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    if request.method == "POST":
-        product.delete()
-        return redirect('catalogue')  # Redirect to a relevant page after deletion
-    return render(request, 'product/confirm_delete.html', {
-        'product': product})
+    product = get_object_or_404(Product, pk=pk, created_by=request.user)
+    product.delete()
+
+
+    return redirect('catalogue:index')  # Redirect to a relevant page after deletion
 
 

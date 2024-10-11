@@ -31,10 +31,10 @@
 
 
             {% if request.user == product.created_by %}
-                <div>
-                    <p>Your Product</p>
-                <a href="{% url 'product:delete' product.id %}" class="inline-block">Delete</a>
-                </div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <a href="{% url 'product:delete' product.id %}" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{% url 'product:edit' product.id %}" class="btn btn-success btn-sm">Edit</a>
+            </div>            
             {% else %}
              <!-- Product Action Buttons -->
              <a href="#" class="btn btn-primary stretched-link">Contact</a>
