@@ -28,6 +28,17 @@
 
             <!-- Product Description -->
             <p class="text-muted">{{ product.description }}</p>
+
+
+            {% if request.user == product.created_by %}
+                <div>
+                    <p>Your Product</p>
+                <a href="{% url 'product:delete' product.id %}" class="inline-block">Delete</a>
+                </div>
+            {% else %}
+             <!-- Product Action Buttons -->
+             <a href="#" class="btn btn-primary stretched-link">Contact</a>
+            {% endif %}
             <!-- Product Seller Information -->
             <p class="text-muted" style="font-style: italic; color: #6c757d;">
                 Sold by: {{ product.created_by }}
@@ -36,8 +47,6 @@
             <p class="h5 text-dark border rounded p-3 bg-light">
                 Price: <span class="text-success">${{ product.price }}</span>
             </p>
-             <!-- Product Action Buttons -->
-             <a href="#" class="btn btn-primary stretched-link">Contact</a>
         </div>
     </div>
 </div>

@@ -44,3 +44,14 @@ def new_product(request):
         'title': 'New Product',
     })
 
+
+@login_required
+def delete(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    if request.method == "POST":
+        product.delete()
+        return redirect('catalogue')  # Redirect to a relevant page after deletion
+    return render(request, 'product/confirm_delete.html', {
+        'product': product})
+
+
