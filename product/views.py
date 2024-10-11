@@ -7,6 +7,13 @@ from django.contrib.auth.decorators import login_required
 from .models import Product  # Import the Product model
 from .forms import NewProductForm # Import the NewProduct
 
+
+
+def product_detail(request, id):
+    product = get_object_or_404(Product, id=id)
+    return render(request, 'product/detail.html', {
+        'product': product})
+
 # Create your views here.
 def product_information(request, pk):
     # Retrieve the product information from the database using the provided primary key.

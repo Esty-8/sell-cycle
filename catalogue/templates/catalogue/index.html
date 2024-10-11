@@ -6,29 +6,36 @@
 
 {% block content %}
 <div>
-    <h3> My Products</h3>
-</div>
+    <h3 class="list">My Products</h3>
 
-
-
-
-
-<div class="container mt-4">
-    <h2 class="text-center mb-4">Categories</h2>
-    <div class="row">
-        {% for category in categories %}
-            <div class="col-md-4 mb-3"> <!-- Adjusted column size for better layout -->
-                <div class="card shadow-sm"> <!-- Card for better visual separation -->
-                    <div class="card-body">
-                        <h5 class="card-title">{{ category.name }}</h5>
-                        <p class="card-text text-danger">{{ category.products.count }} products</p>
+    <div class="container">
+        <div class="row"> <!-- Adjusted row for grid layout -->
+            {% if products %}
+                {% for product in products %}
+                    <div class="col-md-4 d-flex align-items-start mb-3"> <!-- Grid column for products -->
+                        <!-- Linking to the product detail page -->
+                        <a href="{% url 'product:detail' product.id %}">
+                            {% if product.featured_image %}
+                                <img src="{{ product.featured_image.url }}" class="img-fluid" alt="{{ product.name }}">   
+                            {% else %}
+                                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="placeholder image"> 
+                            {% endif %}
+                        </a>
+                        <div class="ms-2"> <!-- Adjusted margin for spacing -->
+                            <h4>{{ product.name }}</h4>
+                            <p>{{ product.description }}</p>
+                            <p class="h5 text-dark border rounded p-2 bg-light">
+                                Price: <span class="text-success">${{ product.price }}</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                    {% endfor %}
+                {% endif %}
             </div>
-        {% endfor %}
+        </div>
     </div>
-</div>
+{% endblock content %}
 
+{% block footer %}
 
-
-{% endblock %}
+{% endblock footer %}
