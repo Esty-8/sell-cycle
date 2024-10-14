@@ -66,7 +66,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'sell',
     'product',
-    'catalogue'
+    'catalogue',
+    'conversation',
 
 ]
 

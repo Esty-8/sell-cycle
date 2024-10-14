@@ -11,7 +11,7 @@ from .forms import NewProductForm, EditProductForm # Import the NewProduct
 
 # all the products from the database that are not sold
 def products(request):
-    query = request.GET.get('query', '')
+    query = request.GET.get('query', '') # Get the query parameter
     products = Product.objects.filter(is_sold=False)
 
     if query:
