@@ -37,7 +37,7 @@
             </div>            
             {% else %}
              <!-- Product Action Buttons -->
-             <a href="#" class="btn btn-primary stretched-link">Contact</a>
+             <a href="{% url 'conversation:message' product.id %}" class="btn btn-primary stretched-link">Contact</a>
             {% endif %}
             <!-- Product Seller Information -->
             <p class="text-muted" style="font-style: italic; color: #6c757d;">
