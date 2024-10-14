@@ -21,32 +21,32 @@
             <a class="navbar-brand" href="{% url 'sell:index' %}">SellCycle</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    
-                    <!-- This link is visible to everyone -->
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'product:products' %}">Browse</a>
+                  </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'catalogue:index' %}">Catalogue</a>
                     </li>
-    
                     <!-- If the user is not authenticated, show the "Login" and "SignUp" links -->
                     {% if not request.user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'sell:signup' %}">SignUp</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'sell:login' %}">Login</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'sell:signup' %}">SignUp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'sell:login' %}">Login</a>
+                    </li>
                     {% else %}
                         <!-- If the user is authenticated, show the "New item" link -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'product:new_product' %}">Add Products</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'product:new_product' %}">Add Products</a>
+                    </li>
                     {% endif %}
     
                 </ul>
      
                 <!-- Search form -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" method="get" action="{% url 'product:products' %}">
+                    <input class="form-control me-2" name="query" value="{{ query }}" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-info" type="submit">Search</button>
                 </form>
             </div>

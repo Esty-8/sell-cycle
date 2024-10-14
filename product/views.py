@@ -9,6 +9,21 @@ from .forms import NewProductForm, EditProductForm # Import the NewProduct
 
 
 
+# all the products from the database that are not sold
+def products(request):
+    query = request.GET.get('query', '')
+    products = Product.objects.filter(is_sold=False)
+
+    if query:
+        products = products.filter(name__icontains=query)
+
+    return render(request, 'product/products.html', {
+        'products': products,
+        'query': query,
+    })
+
+
+
 def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
     return render(request, 'product/detail.html', {

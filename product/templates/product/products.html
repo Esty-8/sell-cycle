@@ -1,0 +1,31 @@
+{% extends 'sell/foundation.html' %}
+{% load static %}
+
+
+{% block title %} Browse {% endblock %}
+
+{% block content %}
+    <div>
+        {% for product in products %}
+    <div class="row"> 
+        <div class="col-4"> <!-- Grid column for products -->
+            <!-- Linking to the product detail page -->
+            <a href="{% url 'product:detail' product.id %}">
+                {% if product.featured_image %}
+                    <img src="{{ product.featured_image.url }}" class="img-fluid small-img" alt="{{ product.name }}">   
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="img-fluid small-img" alt="placeholder image"> 
+                {% endif %}
+            </a>
+            <div class="ms-2"> <!-- Adjusted margin for spacing -->
+                <h4>{{ product.name }}</h4>
+                <p class="h5 text-dark border rounded p-2 bg-light">
+                    Price: <span class="text-success">${{ product.price }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
