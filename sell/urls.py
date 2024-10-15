@@ -1,18 +1,20 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.views import LogoutView
 
 
+from .views import product_information
 from . import views
 from .forms import LoginForm
 
-app_name = 'sell'  # line for namespacing
+app_name = 'sell'  
+
 
 urlpatterns = [
     path('', views.index, name='index'),  # Redirect to the sell app's index view
     path('contact/', views.contact, name='contact'),  # Redirect to the sell app's contact view
     path('login/', auth_views.LoginView.as_view(template_name='sell/login.html', authentication_form=LoginForm), name='login'),   # Redirect to the login
-    path('signup/', views.signup, name='signup'),  # Redirect to the sell app's signup 
+    path('signup/', views.signup, name='signup'),  # Redirect to the sell app's signup
+    path('information/<int:pk>/', product_information, name='product_information'),
   
     
 ]

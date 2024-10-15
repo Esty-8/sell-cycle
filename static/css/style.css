@@ -19,14 +19,3 @@ body {
     margin-bottom: 10px; /* Space below the image */
 }
 
-.footer {
-   position: relative;
-}
-
-.container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    padding: 20px; 
-}

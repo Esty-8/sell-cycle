@@ -15,7 +15,7 @@ class Conversation(models.Model):
         related_name='conversations',
         on_delete=models.CASCADE
     )
-    members = models.ManyToManyField(
+    users = models.ManyToManyField(
         User,
         related_name='conversations'
        
