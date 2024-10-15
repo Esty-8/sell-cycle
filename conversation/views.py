@@ -6,7 +6,7 @@ from .forms import ConversationMessageForm
 from django.contrib.auth.decorators import login_required
 
 
-
+@login_required
 def new_conversation(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
