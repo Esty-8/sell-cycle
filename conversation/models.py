@@ -15,19 +15,34 @@ class Conversation(models.Model):
         related_name='conversations',
         on_delete=models.CASCADE
     )
-    created_at = models.DateTimeField(auto_now_add=True)
-    users = models.ManyToManyField(
+    members = models.ManyToManyField(
         User,
         related_name='conversations'
+       
     )
-    modified_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+    modified_at = models.DateTimeField(
+    auto_now=True
+   )
 
     class Meta:
-        ordering = ['-modified_at']  # Use list for ordering
+        ordering = ['-modified_at',]  # ensures that conversations are retrieved in descending order
 
 
 class ConversationMessage(models.Model):
-    conversation = models.ForeignKey(Conversation, related_name='messages', on_delete=models.CASCADE)
+    conversation = models.ForeignKey(
+        Conversation,
+        related_name='messages',
+        on_delete=models.CASCADE
+    )
     content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    created_by = models.ForeignKey(User, related_name='created_messages', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+    created_by = models.ForeignKey(
+        User,
+        related_name='created_messages',
+        on_delete=models.CASCADE
+    )

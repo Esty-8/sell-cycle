@@ -4,7 +4,7 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 
 
-
+from .views import product_information
 from . import views 
 
 app_name = 'product'  # line for namespacing
@@ -12,7 +12,7 @@ app_name = 'product'  # line for namespacing
 urlpatterns = [
     path('', views.products, name='products'), #browse page
     path('new/', views.new_product, name='new_product'), # new_product is the name of the view function
-    path('<int:pk>/', views.product_information, name='product_information'), 
+    path('information/<int:product_id>/', product_information, name='information'), 
     path('<int:id>/', views.product_detail, name='detail'),  # Detail view for the product
     path('<int:pk>/delete/', views.delete, name='delete'),
     path('<int:pk>/edit/', views.edit, name='edit'),

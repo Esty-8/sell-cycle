@@ -1,17 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required 
-
-
-
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 from .models import Product  # Import the Product model
-from .forms import NewProductForm, EditProductForm # Import the NewProduct
+from .forms import NewProductForm, EditProductForm  # Import the forms
 
-
-
-# all the products from the database that are not sold
+# All products from the database that are not sold
 def products(request):
-    query = request.GET.get('query', '') # Get the query parameter
+    query = request.GET.get('query', '')  # Get the query parameter
     products = Product.objects.filter(is_sold=False)
 
     if query:
@@ -22,23 +16,19 @@ def products(request):
         'query': query,
     })
 
-
-
 def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
     return render(request, 'product/detail.html', {
-        'product': product})
+        'product': product
+    })
 
-# Create your views here.
 def product_information(request, pk):
     # Retrieve the product information from the database using the provided primary key.
     product = get_object_or_404(Product, pk=pk)
 
     return render(request, 'product/information.html', {
         'product': product
-        # Pass the product object to the template for display
     })
-
 
 @login_required  # Ensures the user is logged in before accessing this view
 def new_product(request):
@@ -59,9 +49,6 @@ def new_product(request):
         'title': 'New Product',
     })
 
-
-
-
 @login_required
 def edit(request, pk):
     product = get_object_or_404(Product, pk=pk, created_by=request.user)
@@ -71,28 +58,19 @@ def edit(request, pk):
 
         if form.is_valid():
             form.save()
-
-            return redirect('product:product_information', pk=product.id)  # Redirect to the product listed
+            return redirect('product:product_information', pk=product.id)  # Corrected to use pk
             
     else:
-        form = EditProductForm(instance=product)  # If GET request, display an empty form
+        form = EditProductForm(instance=product)  # If GET request, display the existing product form
 
     return render(request, 'product/form.html', {
         'form': form,
         'title': 'Edit Product',
     })
 
-
-
-
-
-
 @login_required
 def delete(request, pk):
     product = get_object_or_404(Product, pk=pk, created_by=request.user)
     product.delete()
 
-
     return redirect('catalogue:index')  # Redirect to a relevant page after deletion
-
-
