@@ -27,6 +27,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'catalogue:index' %}">Catalogue</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="{% url 'conversation:inbox' %}">Inbox</a>
+                   </li>
                     <!-- If the user is not authenticated, show the "Login" and "SignUp" links -->
                     {% if not request.user.is_authenticated %}
                     <li class="nav-item">

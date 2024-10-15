@@ -11,7 +11,7 @@ def new_conversation(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
     
-    conversations = Conversation.objects.filter(product=product, users__in=[request.user])
+    conversations = Conversation.objects.filter(product=product).filter(users__in=[request.user.id])
     
     # Prevent the product creator from starting a conversation
     if product.created_by == request.user:
@@ -50,3 +50,10 @@ def new_conversation(request, product_id):
     })
 
 
+@login_required
+def inbox(request):
+    conversations = Conversation.objects.filter(users__in=[request.user.id])
+
+    return render(request, 'conversation/inbox.html', {
+        'conversations': conversations,
+    })

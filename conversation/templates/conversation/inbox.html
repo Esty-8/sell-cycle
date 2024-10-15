@@ -1,0 +1,25 @@
+{% extends 'sell/foundation.html' %}
+{% load static %}
+
+{% block title %} Inbox {% endblock %}
+
+{% block content %}
+<h3>
+    <p>Inbox</p>
+</h3>
+<div class="container">
+    <div class="row"> 
+    {% for conversation in conversations %}
+    <div class="col-4 mb-3"> 
+     <a href="#">
+        <div class="card">
+            <img src="{{ conversation.product.image.url }}"  alt="Product Image">
+            <div class="card-body">
+         </div>  
+        </div>
+    </a>
+</div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
