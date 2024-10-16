@@ -19,7 +19,11 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-
+cloudinary.config(
+    cloud_name='didxdkx4y',
+    api_key='894782145376281',
+    api_secret='r18OwJTwWJ4mRBCNGX0RieDBDcQ'
+)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -88,6 +92,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    
+    
 ]
 
 ROOT_URLCONF = 'main.urls'
