@@ -8,16 +8,7 @@
 <div class="container my-5">
     <div class="row">
         {% for message in conversation.messages.all %}
-        <div class="col-md-8 offset-md-2 mb-4
-            {% if message.created_by == request.user %}
-            bg-light text-dark
-            {% elif message.is_urgent %}
-            bg-primary text-white
-            {% elif message.is_read %}
-            bg-success text-white
-            {% else %}
-            bg-primary text-white
-            {% endif %}">
+        <div class="col-md-8 offset-md-2 mb-4">
              <div class="card"> 
                 <div class="card-body">
                 <h5 class="card-title">
@@ -33,5 +24,15 @@
      {% endfor %}
    </div>
 </div>
+<form method="post" action=".">
+   {% csrf_token %}
+
+   {{ form.as_p }}
+
+<!-- Submit button -->
+<div class="d-flex justify-content-center my-3">
+   <button type="submit" class="btn btn-primary btn-block">Send</button>
+</div>
+</form>
 {% endblock %}
 

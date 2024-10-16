@@ -61,9 +61,25 @@ def inbox(request):
 
 @login_required
 def detail(request, pk):
+    # Retrieve the conversation or raise a 404 if not found
    conversation = Conversation.objects.filter(users__in=[request.user.id]).get(pk=pk)
+# Initialize the form for both GET and POST requests
+   form = ConversationMessageForm(request.POST or None)  
+
+   if request.method == 'POST' and form.is_valid():
+  
+    conversation_message = form.save(commit=False)
+    conversation_message.conversation = conversation
+    conversation_message.created_by = request.user
+    conversation_message.save()
 
 
+     # Redirect to the conversation detail page
+    return redirect('conversation:detail', pk=pk)
+
+    
+     # Render the conversation details with the form
    return render(request, 'conversation/details.html', {
-    'conversation': conversation
+    'conversation': conversation,
+    'form':form,
    })
