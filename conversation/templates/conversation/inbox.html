@@ -4,20 +4,18 @@
 {% block title %} Inbox {% endblock %}
 
 {% block content %}
-<h3>
-    <p>Inbox</p>
-</h3>
+<h3 class="text-center">Inbox</h3>
 <div class="container">
     <div> 
     {% for conversation in conversations %}
-    <div class="col-3"> 
+    <div class="col-2"> 
      <a href="{% url 'conversation:detail' conversation.id %}">
         <div class="card">
             <img src="{{ conversation.product.image.url }}"  alt="Product Image">
             <div class="card-body">
                 {% for user in conversation.users.all %}
                     {% if user != request.user %}
-                    <h5 class="card-title">{{ user.username }}</h5>  <!-- Use card-title for the username -->
+                    <h5 class="card-title"> message from  {{ user.username }}</h5>  <!-- Use card-title for the username -->
                     <p class="card-text text-muted mb-2">{{ conversation.modified_at|date:"F j, Y, g:i a" }}</p> <!-- Format the date -->
                     <p class="card-text">{{ conversation.product.name }}</p>
                     {% endif %}
