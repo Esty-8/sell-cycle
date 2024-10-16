@@ -57,3 +57,13 @@ def inbox(request):
     return render(request, 'conversation/inbox.html', {
         'conversations': conversations,
     })
+
+
+@login_required
+def detail(request, pk):
+   conversation = Conversation.objects.filter(users__in=[request.user.id]).get(pk=pk)
+
+
+   return render(request, 'conversation/details.html', {
+    'conversation': conversation
+   })
