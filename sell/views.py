@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect
 from product.models import Category, Product  # Import the Product model
 
 from .forms import SignupForm # Import the Signup
@@ -26,7 +27,7 @@ def contact(request):
     return render(request, 'sell/contact.html')
 
 
-def signup(request):
+def signup_view(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
