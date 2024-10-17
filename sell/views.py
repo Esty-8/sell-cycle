@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.contrib.auth import login
 from product.models import Category, Product  # Import the Product model
 
 from .forms import SignupForm # Import the Signup
@@ -31,8 +32,9 @@ def signup_view(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('login')  # Redirect to the sell app's index view after successful signup.
+            user = form.save()
+            login(request, user)
+            return redirect('sell:login')  # Redirect to the sell app's index view after successful signup.
     else:
         form = SignupForm()
 

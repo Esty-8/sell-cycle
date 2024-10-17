@@ -37,7 +37,7 @@
             {% else %}
                 <!-- Product Action Buttons -->
                 {% if user.is_authenticated %}
-                    <a href="{% url 'conversation:new_conversation' product.id %}" class="btn btn-primary">Contact</a>
+                    <a href="{% url 'conversation:new_conversation' product.id %}" class="btn btn-primary">Message</a>
                 {% endif %}
             {% endif %}
 
