@@ -1,11 +1,11 @@
 <h1 align="center">SellCycle</h1>
 
 
-[View the live project here]
+[View the live project here](https://sell-app-cycle-f7894996863d.herokuapp.com/)
 
 
-SellCycle is an online website for buying, selling, and exchanging new and secondhand clothing, accessories, and other items. 
- It provides a convenient platform for individuals to declutter their closets, find great deals, and give preloved items a second life, all while fostering a sustainable shopping experience.
+SellCycle is an online website for buying, selling, and exchanging new and secondhand clothing, accessories, and more. 
+It offers users a convenient way to declutter their closets, discover fantastic deals, and give preloved items a new lease on life. With a focus on sustainability, SellCycle promotes an eco-friendly shopping experience that benefits both individuals and the planet.
 
  ## User Experience (UX)
 
