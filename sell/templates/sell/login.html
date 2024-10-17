@@ -37,12 +37,18 @@
                     {{ error }}
                 </div>
             {% endfor %}
-            
-  
+
+
             <!-- Submit button -->
             <div class="mt-4">
-                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
+            {% if user.is_authenticated %}
+            <a href="{% url 'sell:logout' %}">Logout</a>
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary btn-block">Logout</button>
+            </div>
+            {% endif %}
         </form>
     </div>
 </div>

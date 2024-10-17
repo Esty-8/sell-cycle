@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.contrib.auth import login
+from django.contrib.auth import logout
+from django.contrib import messages
 from product.models import Category, Product  # Import the Product model
 
 from .forms import SignupForm # Import the Signup
@@ -42,3 +44,8 @@ def signup_view(request):
         'form': form,  # Pass the form instance to the template for display.
     }) # The signup.html template will be rendered with the form instance.
 
+
+def custom_logout_view(request):
+    logout(request)
+    messages.success(request, "You have been logged out.")
+    return redirect('sell:login')  # Redirect to the login page
