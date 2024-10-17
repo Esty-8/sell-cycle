@@ -7,7 +7,21 @@
 SellCycle is an online website for buying, selling, and exchanging new and secondhand clothing, accessories, and more. 
 It offers users a convenient way to declutter their closets, discover fantastic deals, and give preloved items a new lease on life. With a focus on sustainability, SellCycle promotes an eco-friendly shopping experience that benefits both individuals and the planet.
 
- ## User Experience (UX)
+
+![](static/images/Screenshot4.png)
+
+# Index
+
+# Index
+
+1. [User Experience (UX)](#user-experience-ux)
+2. [Features](#features)
+3. [Design](#design)
+4. [Planning](#planning)
+5. [Technologies Used](#technologies-used)
+6. [Testing](#testing)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
  ### User stories :
 
