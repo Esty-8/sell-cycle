@@ -10,7 +10,7 @@ It offers users a convenient way to declutter their closets, discover fantastic 
 
 ![](static/images/Screenshot4.png)
 
-# Index
+
 
 # Index
 
@@ -22,6 +22,8 @@ It offers users a convenient way to declutter their closets, discover fantastic 
 6. [Testing](#testing)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
+
+# User Experience(UX)
 
  ### User stories :
 
@@ -95,63 +97,57 @@ Click here to see the Tablet Wireframes
 </summary>
 </details>
 
-###  Features
+
+#  Features
 
 
-- **Navigation Bar**
+### Navigation Bar
 
- - The navigation bar is available on all 4 pages. It is fully responsive and provides links to all the areas of the website, some links based on whether the user is authenticated and logged in or not. Users are able to navigate on any size device with a burger menu with dropdown for small devices. users can easily click on the site logo to returnm back to the landing page.
-
+ - Consistent Design: The navigation bar provides a cohesive design and layout across all pages, ensuring easy access to essential sections of the site.
+ - Quick Navigation: It includes the SellCycle logo and a link to the homepage for fast navigation.
+ - User Authentication: For users who are not logged in, options to register or log in are clearly displayed. Once logged in, the navigation bar updates to show the 
+   Catalogue as well as add products along with a personalized greeting that includes the user’s name and a profile icon.
+ - Responsive Design: The navigation bar is optimized for responsiveness, adapting seamlessly to various screen sizes. On mobile devices, it transforms into a compact      'hamburger' menu, allowing effortless navigation without cluttering the interface.
   Desktop
 
-  Mobile
+### Navigation Bar Views
 
-- **Landing Page**
+<details>
+<summary>Unregistered User Navigation Bar View</summary>
+<img src="static/images/navbar-login.png" alt="Unregistered User Navigation Bar" width="600">
+</details>
+
+<details>
+<summary>Registered User Navigation Bar View</summary>
+<img src="static/images/logout-navbar.png" alt="Registered User Navigation Bar" width="600">
+</details>
+
+<details>
+<summary>Burger Menu View</summary>
+<img src="static/images/mobile-navbar.png" alt="Burger Menu View" width="600">
+</details>
+
+### Landing Page
+- At the top of the landing page, a striking area showcases a vibrant image of diverse products available for buying and selling. This compelling visual communicates SellCycle's purpose as a dynamic platform for facilitating seamless transactions. The branding prominently features the SellCycle name, reinforcing the site's mission to connect users in a convenient and intuitive marketplace experience.
+
+<details>
+<summary>Landing Page</summary>
+<img src="static/images/login.png" alt="landing page" width="700">
+</details>
 
 
-- **The Footer**
 
- - The footer like the navbar is accessible on all pages of the website. On this section users can access the social sites of the website. Users have the choice to follow the website on any of the social medis sites for new products.
 
-- **Dashboard**
-
- - The Dashboard is only accessible to authenticated logged in users. This is an area where each user can see their own added items. In this section they are able to edit and or delete any of their products listed. 
- - Users get a message each time they successfully edit and or delete a product. 
- - Users get a prompt message if they really want to delete. This is everytime they delete an item to give them a chance to change their mind. 
- 
-- **Signup**
-
- - Signup page allows the users to register and join on the sell&buy. 
- - This allows the user to be able to post items for selling as well as purchase an item. 
- - User's get a message pop up letting themn know they have successfully signed up.
-
-- **LogIn** 
-
- - This page allows already authenticated users to log into the site . 
- - Users get message to let then know theyve succesfully logged in 
- -  The logIn will then change to logout once the user is successfully loggedin.
- - The user gets a prompt message if they are sure they want to log out , before getting a message they have successfully logged out if they complete the process.
-
-- **Add items**
-
- -
- -
- -
 
 
 ### Future Features
 
-- **Seller Profiles**
-  
- -
- -
+ 
  - Users will have CRUD functionality and autonomy on their profiles
 
 
-- **Contact seller**
 
-- 
-- Users to be able to like items as well as contact the  seller. 
+
 
 - **Browse**
 
