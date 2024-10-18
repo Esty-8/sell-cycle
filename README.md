@@ -132,8 +132,78 @@ Click here to see the Tablet Wireframes
 
 <details>
 <summary>Landing Page</summary>
-<img src="static/images/login.png" alt="landing page" width="700">
+<img src="static/images/login.png"  width="700">
 </details>
+
+
+
+**Add items**
+
+- When an authenticated user logs into their account, they gain access to a streamlined interface that allows them to easily add items they wish to sell. This feature empowers users to list their products quickly, with a user-friendly form guiding them through the process. Users can upload images, provide detailed descriptions, set prices, and manage their listings effortlessly, making it simple to showcase their items to potential buyers.
+
+### User Authentication (SignUp, Login, Logout)
+
+- User authentication methods have been integrated to ensure that users can only list items for sale if they are logged in. Existing users must log in to access the selling features, while new users can easily register before making a listing request.
+
+Dedicated login and logout pages provide a secure authentication experience. If a user attempts to log in with an incorrect username or password, immediate on-screen feedback is given, prompting them to enter the correct credentials. Additionally, a required feature ensures that users must fill in both the username and password fields, preventing incomplete submissions and enhancing overall security.
+
+<details>
+<summary>Sign Up and Login in to add items</summary>
+<img src="static/images/add.png"  width="600">
+</details>
+
+<details>
+<summary>Login/Logout Forms</summary>
+<img src="static/images/login-form.png"  width="600">
+
+<img src="static/images/signUp-form.png"  width="600">
+</details>
+
+<details>
+<summary>Existing user alert</summary>
+<img src="static/images/alert.png"  width="600">
+</details>
+
+
+### Listing Items
+
+- Item Listing System
+The item listing page features an eye-catching image of the product alongside a detailed description and associated pricing information. When a user wants to list an item for sale, they must provide their Name, , Category , Price, and any additional required information about the item they wish to sell.
+- An  "Add" button is prominently displayed at the bottom of the form, allowing users to finalize their item listing.
+
+Key Features:
+Custom Input Fields: Tailored fields ensure comprehensive data collection.
+
+### Inbox
+
+<details>
+<summary>Message the seller</summary>
+<img src="static/images/"  width="600">
+</details>
+
+
+### Catalogue 
+<details>
+<summary></summary>
+<img src="static/images/"  width="600">
+</details>
+
+
+### Browse 
+<details>
+<summary>See products and their prices listed </summary>
+<img src="static/images/"  width="600">
+</details>
+
+### Categories
+<details>
+<summary>See the available categories  </summary>
+<img src="static/images/"  width="600">
+</details>
+
+
+
+
 
 
 
@@ -168,6 +238,33 @@ Click here to see the Tablet Wireframes
 -   [Python](https://www.python.org/)
 
 ### Frameworks, Libraries & Programs Used
+
+### Technologies Used
+
+- **Google Fonts:** Implemented the Josefin Sans font to enhance the site's typography.
+- **Font Awesome:** Incorporated to provide icons that improve both aesthetics and user experience.
+- **Git:** Utilized for version control, employing the Gitpod terminal for committing changes and pushing updates to GitHub.
+- **GitHub:** Acts as the project's code repository, facilitating agile development through User Stories (GitHub Issues) and tracking progress on a Kanban board.
+- **dbdiagram.io:** Used to create Entity Relationship diagrams that represent the application’s data model.
+- **Balsamiq:** Applied to design wireframes during the planning phase, aiding in the visual structure of the application.
+- **Django:** The framework chosen for its ability to support rapid and secure application development.
+- **Bootstrap:** Used to create responsive web pages, ensuring a seamless experience across devices.
+- **Gunicorn:** The web server selected to run the Django application on Heroku.
+- **dj_database_url:** A library that simplifies the connection to PostgreSQL databases through URL configuration.
+- **psycopg2:** The database adapter that enables communication with PostgreSQL databases.
+- **Cloudinary:** Utilized for storing and managing images used throughout the application.
+- **Summernote:** Integrated for rich text editing capabilities in the "ADDITIONAL TEXT" field when users create or edit bookings.
+- **Django Allauth:** Employed to manage user registration and authentication processes effectively.
+- **Django Crispy Forms:** Facilitates cleaner and more efficient form rendering.
+- **jQuery:** Utilized to enhance user interactions by fading out alert messages smoothly.
+- **Django Testing Tools:** Used for testing the application’s Model-View-Template (MVT) architecture to ensure reliability.
+
+### Agile Development with Github
+
+- For the SellCycle project, GitHub Issues served as the Agile management tool. User Stories, complete with acceptance criteria, were defined and tracked through GitHub Issues, while development progress was organized using a Kanban board. Each User Story was linked to a 'parent' Epic issue, illustrating how they contribute to the project's overarching objectives. Acceptance criteria were rigorously tested as each story progressed to the 'Done' column, and they were also included in the comprehensive manual testing outlined in the Testing section of this README.
+You can access the Epic, User Stories, and Kanban board here: [Kanban Board](https://github.com/users/Esty-8/projects/9)
+
+
 
 
 
