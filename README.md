@@ -8,7 +8,7 @@ SellCycle is an online website for buying, selling, and exchanging new and secon
 It offers users a convenient way to declutter their closets, discover fantastic deals, and give preloved items a new lease on life. With a focus on sustainability, SellCycle promotes an eco-friendly shopping experience that benefits both individuals and the planet.
 
 
-![](static/images/Screenshot4.png)
+![](static/images/12.png)
 
 
 
@@ -132,7 +132,7 @@ Click here to see the Tablet Wireframes
 
 <details>
 <summary>Landing Page</summary>
-<img src="static/images/login.png"  width="700">
+<img src="static/images/landing-page.png"  width="700">
 </details>
 
 
@@ -148,7 +148,7 @@ Click here to see the Tablet Wireframes
 Dedicated login and logout pages provide a secure authentication experience. If a user attempts to log in with an incorrect username or password, immediate on-screen feedback is given, prompting them to enter the correct credentials. Additionally, a required feature ensures that users must fill in both the username and password fields, preventing incomplete submissions and enhancing overall security.
 
 <details>
-<summary>Sign Up and Login in to add items</summary>
+<summary>Sign Up or Login  to be able to add items</summary>
 <img src="static/images/add.png"  width="600">
 </details>
 
