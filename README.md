@@ -99,7 +99,7 @@ Click here to see the Tablet Wireframes
 
 
 ##  Features
-- SellCycle is a comprehensive web application developed using the Django framework, designed to provide a user-friendly platform for individuals looking to buy and sell second-hand items. This project enables users to easily add items for sale, browse available listings, and engage with other users. With an intuitive interface, sellers can efficiently manage their listings  while buyers can search, filter, and find great deals on pre-owned products. Users have the ability to create, read, update, and delete their listings, as well as manage their accounts seamlessly.
+- SellCycle is a comprehensive web application developed using the Django framework, designed to provide a user-friendly platform for individuals looking to buy and sell second-hand items. This project enables users to easily add items for sale, browse available listings, and engage with other users. With an intuitive interface, sellers can efficiently manage their listings  while buyers can search, filter, and find great deals on pre-owned products. Users have the ability to **create**, **read**, **update**, and **delete** their listings, as well as manage their accounts seamlessly.
 
 ### Navigation Bar
 
@@ -181,8 +181,16 @@ Item Listing System
 The item listing page features an eye-catching image of the product alongside a detailed description and associated pricing information. When a user wants to list an item for sale, they must provide their Name, Category , Price, and any additional required information about the item they wish to sell.
 An  "Add" button is prominently displayed at the bottom of the form, allowing users to finalize their item listing.
 
-Key Features:
-Custom Input Fields: Tailored fields ensure comprehensive data collection.
+
+###  CRUD Functionality for Listings
+
+The Create, Read, Update, and Delete (CRUD) functionality is crucial for managing user listings on SellCycle. After logging in, users have access to buttons that allow them to edit or delete their listings. They can also view their current listings at any time.
+
+- **Edit Button**: If a user wishes to change the details of their listing, an Edit button is readily available. Upon clicking this button, users can modify the listing information, and once confirmed, the updates are applied immediately.
+
+- **Delete Button**: Users can also easily remove their listings by clicking the Delete button. This functionality ensures that users have full control over their items and can manage their listings efficiently.
+
+This streamlined process enhances user experience by providing intuitive options for managing listings directly from their account dashboard.
 
 ### Inbox
 
@@ -235,9 +243,30 @@ The admin interface of SellCycle offers a user-friendly graphical user interface
 Non-technical users, such as business managers and customer service representatives, can navigate the Django admin interface without needing to understand the underlying code. The auto-generated forms make it straightforward to add, edit, or remove entries.
 
 ### Database Integration:
-- User interactions managed through the Django admin panel
-- User notifications to confirm successful actions
-- Admin tools for efficiently managing listings and conversations
+
+### SellCycle: Admin Functionality for Managing Listings
+
+The admin user can add and publish items through the admin pages of SellCycle. These pages are accessible either by appending '/admin' to the application URL or by signing in and clicking the Admin link, which appears in the navigation bar only when the admin is logged in.
+To add a new item, the admin can click the "+ Add" link next to the table name and then fill in the required data fields. A rich text editor (Summernote) is provided for the item description, allowing for easy formatting. If the admin user does not upload an image, a default image will be used for the item. This functionality streamlines the process of managing listings and ensures a consistent presentation on the platform.
+
+<details>
+<summary>User interactions managed through the Django admin panel</summary>
+<img src="static/images/admin.png"  width="600">
+</details>
+
+
+<details>
+<summary>The admin user can select the category and add items</summary>
+<img src="static/images/admin.png"  width="600">
+</details>
+
+
+
+ <details>
+<summary> Admin effectively handling conversations</summary>
+<img src="static/images/admin.png"  width="600">
+</details>
+
 
 ### SellCycle: Responsive Design with Bootstrap
 
@@ -264,32 +293,68 @@ Responsive design ensures that SellCycle functions seamlessly across all devices
 - **Social Proof**: Links to social media profiles, such as GitHub, LinkedIn, and Twitter, demonstrate the company's connections to reputable networks.
 - **Secure Practices**: Implementing user authentication and form validation enhances credibility and user confidence.
 
-### Bootstrap Integration:
-
-- **Eye-Catching Theme**: A visually appealing design that captures user interest and promotes engagement.
 
 
+### How Existing Features Address User Stories
+
+The User Stories in the User Experience (UX) section of this document are numbered from 1 to 10, while the existing features are labeled as F01 to F07. Below is a traceability matrix that cross-references the user stories with the corresponding features, demonstrating how each feature supports specific stories:
 
 
+<details>
+<summary>Traceability Matrix Graphic</summary>
+<img src="static/images/"  width="600">
+</details>
 
 
-### Future Features
+###  Features which could be implemented
 
- 
- - Users will have CRUD functionality and autonomy on their profiles
-
-
+*Buy Integration for User Items*
+- Implementing a buy integration feature on SellCycle will enable users to purchase items directly through the platform, creating a seamless shopping experience. This feature is essential for facilitating transactions between buyers and sellers efficiently.
 
 
+*Instant Checkout*
 
-- **Browse**
+- A streamlined checkout process that minimizes steps, enabling users to complete their purchases swiftly. This includes reviewing item details, confirming shipping information, and selecting payment options.
 
- -
- -
+*Inventory Management*
 
-- **Dashboard**
- - 
- - To keep track of the items added.
+- Real-time updates to item availability to ensure users can only purchase items that are in stock, reducing the risk of overselling.
+
+*Order Confirmation*
+
+- Automated email or in-app notifications confirming the purchase details, including item description, price, and estimated delivery time, to enhance user trust.
+
+
+*Like/Unlike Functionality for User Items*
+
+- Implementing a like/unlike feature for items added by users can significantly enhance engagement on SellCycle. This feature would allow users to express their appreciation for items by clicking a "like" button. Each user would have the ability to like or unlike items, with the status being tracked in the database to ensure accurate counts and user interactions.
+
+*Shopping Cart Functionality for User Items*
+
+- Introducing a cart feature for user-added items on SellCycle can enhance the shopping experience significantly. This feature would allow users to save items they’re interested in purchasing, facilitating a smoother transaction process.
+
+*Payment Integration for Users*
+
+- Implementing a payment integration feature for user-added items on SellCycle will streamline the purchasing process and enhance user convenience. This feature would allow users to complete transactions directly through the platform, making it easier to buy items they are interested in.
+
+*Transaction History*
+
+- A section in user profiles where they can view their past purchases and payment history, adding transparency and convenience.
+
+*Loyalty and Referral Programs*
+
+- Introducing loyalty and referral programs on SellCycle can enhance user engagement and encourage repeat transactions. These features would reward users for their activity on the platform, fostering a sense of community and encouraging word-of-mouth promotion.
+
+## Entity-Relationship Diagram (ERD)
+
+<details>
+<summary></summary>
+<img src="static/images/"  width="600">
+</details>
+
+Entities:
+
+- User: Represents the customer who adds the items. This is a foreign key referencing Django's built-in User model.
 
 ## Technologies Used
 
@@ -326,6 +391,21 @@ Responsive design ensures that SellCycle functions seamlessly across all devices
 
 - For the SellCycle project, GitHub Issues served as the Agile management tool. User Stories, complete with acceptance criteria, were defined and tracked through GitHub Issues, while development progress was organized using a Kanban board. Each User Story was linked to a 'parent' Epic issue, illustrating how they contribute to the project's overarching objectives. Acceptance criteria were rigorously tested as each story progressed to the 'Done' column, and they were also included in the comprehensive manual testing outlined in the Testing section of this README.
 You can access the Epic, User Stories, and Kanban board here: [Kanban Board](https://github.com/users/Esty-8/projects/9)
+
+### Testing
+
+- HTML Validation
+
+Since this project utilizes Django templates, the HTML has been validated by manually executing the application pages, copying the source of the rendered pages, and then validating this version of the HTML using the [W3C Validator](https://validator.w3.org). The HTML for the Django admin site pages was not edited, so it has not been validated here. The Signup/Registration form, Login, and Logout pages from Django Allauth were remodeled and have been validated, with results provided below.
+
+
+- Validation result for index.html
+- Validation result for Signup form page
+- Validation resign for Sign In Page
+- Validation result for Add Page
+- Validation result for Catalogue  Page
+- Validation result for Browse Page
+- Validation result for Inbox Page
 
 
 
