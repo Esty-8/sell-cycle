@@ -61,6 +61,38 @@ I've used Balsamiq to design my site wireframes.
 
 [Balsamiq](https://balsamiq.com/wireframes) 
   
+
+
+### Desktop Wireframes
+
+<details>
+<summary>Click here to see the Desktop Wireframes</summary>
+<summary> Home Page Unregistred user view</summary>
+<img src="static/images/desktop.png"  width="600">
+<summary> Home Page  user registred view</summary>
+<img src="static/images/logout.png"  width="600">
+<summary> Add Product page</summary>
+<img src="static/images/addpage.png"  width="600">
+<summary>Inbox</summary>
+<img src="static/images/inboxx.png"  width="600">
+<summary>Message Page</summary>
+<img src="static/images/inbox2.png"  width="600">
+<summary>Catalogue Page</summary>
+<img src="static/images/catal.png"  width="600">
+<summary>Browse Page</summary>
+<img src="static/images/myproducts.png"  width="600">
+</details>
+
+### Tablet Wireframes
+
+<details>
+
+<summary>
+Click here to see the Tablet Wireframes
+</summary>
+</details>
+
+
 ## Mobile Wireframes
 
 <details>
@@ -72,24 +104,7 @@ Click here to see the Mobile Wireframes
 </details>
 
 
-### Desktop Wireframes
 
-<details>
-
-<summary>
-Click here to see the Desktop Wireframes
-</summary>
-
-</details>
-
-### Tablet Wireframes
-
-<details>
-
-<summary>
-Click here to see the Tablet Wireframes
-</summary>
-</details>
 
 
 ##  Features
@@ -727,10 +742,10 @@ The project mockup was designed with [Am I Responsive?](http://ami.responsivedes
 
 ### Credits
 
-- This README was adapted from the structure provided in [this repository](https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md) as well as (https://github.com/TerenceTamuka/handy-man-services-fullstack-project)
+- This README was adapted from the structure provided in [this repository](https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md) as well as [this repository](https://github.com/TerenceTamuka/handy-man-services-fullstack-project)
 
 - **ChatGPT**: This AI tool assisted in generating ideas for the project website and provided coding ideas to enhance the app's functionality.
 
-- **Codemy.com** and **https://www.youtube.com/watch?v=YZvRrldjf1Y&t=865s:** I watched several Django tutorials on this channel, which greatly contributed to my development process.
+- **[Codemy](Codemy.com)** and **[freeCodeCamp](https://www.youtube.com/watch?v=YZvRrldjf1Y&t=865s:)** I watched several Django tutorials on this channel, which greatly contributed to my development process.
 
-- **Net Ninja**: This channel helped clarify key concepts related to templates, forms, and models used in this project.
+- **[Net Ninja](https://www.youtube.com/watch?v=wQPaXedytlg&t=174s)**: This channel helped clarify key concepts related to templates, forms, and models used in this project.
