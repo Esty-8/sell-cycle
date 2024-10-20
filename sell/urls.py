@@ -1,7 +1,5 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-
- 
 from .views import product_information, signup_view, custom_logout_view  # Import the logout view
 from . import views
 from .forms import LoginForm

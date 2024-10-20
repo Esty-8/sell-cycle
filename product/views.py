@@ -54,11 +54,11 @@ def edit(request, pk):
     product = get_object_or_404(Product, pk=pk, created_by=request.user)
 
     if request.method == 'POST':
-        form = EditProductForm(request.POST, request.FILES, instance=product)  # Handle file upload (images)
+        form = EditProductForm(request.POST, request.FILES, instance=product)  
 
         if form.is_valid():
             form.save()
-            return redirect('product:product_information', pk=product.id)  # Corrected to use pk
+            return redirect('product:product_information', pk=product.id) 
             
     else:
         form = EditProductForm(instance=product)  # If GET request, display the existing product form

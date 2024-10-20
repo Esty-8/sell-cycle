@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from .views import product_information
 from . import views 
 
-app_name = 'product'  # line for namespacing
+app_name = 'product'  
 
 urlpatterns = [
     path('', views.products, name='products'), #browse page

@@ -33,30 +33,24 @@ It offers users a convenient way to declutter their closets, discover fantastic 
    - As a **Site User** I can **view a list of products** so that **I can select one to access more details or purchase**
 *  View item information
    - As a **Site User** I can **click on a product** so that **I can view its full details**
-*  Buy a product
-   - As a **Site User** I can **see a selection of items** so that **which I can choose from**
 *  View the categories section
-   - As a **Site User** I can **access a list of categories of items** and purchase the wanted item**
+   - As a **Site User** I can **access a list of categories of items** 
 *  Delete/Edit a product listed
-   - As a **Site User** I can **cancel a hike I have booked** so that **a place is no longer reserved for me**
-*  View likes
-   - As a **Site User** I can **view the number of likes on each number** so that **I can see which are most popular**
-*  Like / Unlike an item
-   - As a **Site User** I can **like or unlike an item** so that **I can increase the product popularity**
+   - As a **Site User** I can **delete or edit an listed item** The user can select a product to edit.
 *  Contact seller
    - As a **Site User** I can **contact the seller** so that **I can give ask for more information**
 *  View past conversations
    - As a **Site User** I can **view past conversations** so that I can stay in contact**with the customers**
-*  Approve comments
-   - As a **Site Admin** I can **review and then approve or disapprove comments** so that **unsuitable or objectionable content can be filtered out**
 *  Account registration and login
    - As a **Site User** I can **add item and description**of the product  **that I want to sell**
+* Catalogue
+  - As a **Site User** I can **access a catalogue of products** so that **I can see products I have previously added**
 *  Manage stock
    - As a **Site Admin** I can **create, read, update and delete items** so that **I can manage site content and  availability**
+*  Conversation
+   - As a **Site Admin** I can **review the messages** so that **unsuitable or objectionable content can be deleted**
 *  Add items 
    - As a **Site Admin** I can **add items and images** so that **I can finish writing the content later and release once approved**
-* Browse items
-  - As a **Site User** I can **access a list of items in that past that I added** so that **I can see products I have previously added**
 
 
 
@@ -471,6 +465,124 @@ Since this project utilizes Django templates, the HTML has been validated by man
 </details>
 
 
+### CSS Validation
+- [CSS Validator](https://validator.w3.org/nu/#textarea)
+
+
+<details>
+<summary>Validation result for the CSS</summary>
+<img src="static/images/css.png"  width="600">
+</details>
+
+
+### Python Validation
+- [Python Validator](https://pep8ci.herokuapp.com/)
+
+<details>
+<summary>Validation result for the Apps</summary>
+<img src="static/images/apps.png"  width="600">
+</details>
+
+
+<details>
+<summary>Validation result for the Views.py</summary>
+<img src="static/images/python.png"  width="600">
+</details>
+
+<details>
+<summary>Validation result for the Urls</summary>
+<img src="static/images/urls.png"  width="600">
+</details>
+
+<details>
+<summary>Validation result for the Models</summary>
+<img src="static/images/models.png"  width="600">
+</details>
+
+<details>
+<summary>Validation result for the Forms</summary>
+<img src="static/images/forms.png"  width="600">
+</details>
+
+
+<details>
+<summary>Validation result for the Admin</summary>
+<img src="static/images/admins.png"  width="600">
+</details>
+
+
+### Browser Compatibility Testing Report
+
+#### Overview
+To ensure optimal user experience across various devices and browsers, the application was tested for responsiveness and compatibility. The following browsers and versions were utilized for testing:
+
+#### Testing Environment
+- **Chrome DevTools**: Used for testing responsiveness on different screen sizes.
+  
+#### Browsers Tested
+1. **Google Chrome**
+   - Version: 9.0.4606.81 (64-bit)
+   - Notes: The application displayed well on various screen sizes, with no major issues identified.
+   
+2. **Firefox**
+   - Version: 93.0 (64-bit)
+   - Notes: Functionality and layout remained consistent across different resolutions.
+   
+3. **Microsoft Edge**
+   - Version: 94.0.992.38 (64-bit)
+   - Notes: Performance was stable, with the interface adapting correctly to various screen sizes.
+
+#### Key Findings
+- **Responsiveness**: The application maintains a responsive layout across all tested browsers. Elements resize and reposition appropriately based on screen size.
+- **Cross-Browser Functionality**: No significant discrepancies were found in functionality between the tested browsers.
+- **User Experience**: Overall, the user experience is consistent, ensuring that users can navigate and interact with the application seamlessly regardless of the browser used.
+
+#### Recommendations
+- Regularly update browser versions during testing as new updates may introduce compatibility issues.
+- Consider expanding testing to include additional browsers (e.g., Safari, Opera) and mobile browsers to ensure broader compatibility.
+
+This testing confirms that the application is robust and user-friendly across the specified environments.
+
+## Manual Testing Test Cases and Results
+
+- 
+- 
+
+### How to Clone the Repository
+
+To clone this repository and set up the application locally, follow these steps:
+
+1. **Navigate to the GitHub Repository**: Go to [this link](https://github.com/Esty-8/sell-cycle).
+
+2. **Copy the Repository URL**: Click on the "Code" button, select HTTPS, and copy the provided URL.
+
+3. **Open Your Terminal**: Launch your GitBash terminal and navigate to the directory where you want to store the cloned project.
+
+4. **Clone the Repository**: Run the following command in the terminal:
+   ```bash
+   git clone https://github.com/Esty-8/sell-cycle
+   ```
+   Press Enter to start the cloning process.
+
+5. **Install Dependencies**: Use the command below to install the necessary dependencies for the application:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. **Set Debug Mode**: While developing or running the app locally, ensure that `DEBUG=True` is set in the `settings.py` file.
+
+7. **Push Changes Back to GitHub**: To push any modifications made to the cloned repository, follow these steps:
+   - **Add Modified Files**: Use `git add <filename>` for specific files or `git add .` to include all changed files.
+   - **Commit Changes**: Commit your changes with a descriptive message:
+     ```bash
+     git commit -m "description of changes"
+     ```
+   - **Push Changes**: Finally, push the changes to the repository:
+     ```bash
+     git push
+     ```
+
+   **Note**: Any updates pushed to the master branch will be reflected in the live application once it is redeployed from Heroku.
 
 
 
@@ -480,6 +592,145 @@ Since this project utilizes Django templates, the HTML has been validated by man
 
 
 
+### Deployment
+
+Below are the steps to clone this project repository, along with the necessary configurations and deployment procedures. You can find a summary of similar steps in the CI Cheat Sheet provided by Code Institute.
+
+1. **Cloning the Repository**: Instructions for cloning this project repository.
+
+2. **Setting Up the Application and PostgreSQL Database on Heroku**: Guidance on creating the application and configuring the PostgreSQL database on Heroku.
+
+3. **Configuring Cloudinary**: Steps to set up Cloudinary for hosting images used in the application.
+
+4. **Linking the Heroku Application to the GitHub Repository**: Instructions for connecting the Heroku app to the GitHub repository to streamline deployments.
+
+5. **Final Deployment Process**: A walkthrough of the final steps needed for successful application deployment.
 
 
+### Create Application and Postgres DB on Heroku
 
+1. **Log into Heroku**: Go to the [Heroku website](https://www.heroku.com) and log in to your account.
+
+2. **Create a New Application**: In the Heroku dashboard, click the **Create new app** button. If you're a new user, you’ll see a prompt to create an app. If not, select **New** from the dropdown menu in the top right corner and click **Create a new app**.
+
+3. **App Configuration**: On the **Create New App** page, enter a unique name for your app and select a region. Then click **Create app**.
+
+4. **Add Postgres Database**: After creating the app, navigate to the **Resources** tab. In the **Add-ons** section, search for **Heroku Postgres**. Select it from the list and click **Submit Order Form** in the dialog that appears.
+
+5. **Configure Environment Variables**: Next, go to the **Settings** tab and click **Reveal Config Vars**. Verify that the `DATABASE_URL` has been automatically configured.
+
+   - Add a new Config Var called `DISABLE_COLLECTSTATIC` and set its value to `1`.
+   - Add another Config Var named `SECRET_KEY` and assign it a random string of characters (letters, numbers, and symbols).
+
+6. **Update `settings.py`**: Modify your `settings.py` file to use these environment variables for database configuration and secret key management:
+   ```python
+   DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+   SECRET_KEY = os.environ.get('SECRET_KEY')
+   ```
+
+7. **Migrate the Database**: In your Gitpod terminal, initialize the database schema by running the migration command:
+   ```bash
+   python3 manage.py migrate
+   ```
+
+8. **Update Requirements**: Ensure your `requirements.txt` file includes all necessary dependencies by running:
+   ```bash
+   pip3 freeze --local > requirements.txt
+   ```
+
+9. **Commit and Push Changes**: Push any local modifications to GitHub by committing and pushing as usual:
+   ```bash
+   git add .
+   git commit -m " Heroku deployment"
+   git push
+   ```
+
+10. **Run the Application Locally**: To run the app on localhost, ensure that the `SECRET_KEY` and `DATABASE_URL` environment variables are set in your `env.py` file.
+
+### App Creation on Heroku Dashboard
+*Steps for connecting Postgres DB on Heroku have been outlined above.*
+
+<details>
+<summary>App created on Heroku</summary>
+<img src="static/images/heroku.png"  width="1000">
+</details>
+
+<details>
+<summary>Connecting Postgress DB on Heroku</summary>
+<img src="static/images/post.png"  width="1000">
+</details>
+
+### Configure Cloudinary for Hosting Application Images
+
+1. **Sign Up for Cloudinary**: Go to the Cloudinary website and create an account if you haven’t already. During the registration process, provide your name, email address, and create a password. When asked about your "primary interest," select **Programmable Media** for image and video APIs. After completing the sign-up, verify your account using the confirmation email you receive. This will give you access to your Cloudinary dashboard.
+
+2. **Obtain the API Environment Variable**: In your Cloudinary dashboard, find the API Environment variable and copy its value by clicking the **Copy to clipboard** button.
+
+3. **Configure Cloudinary on Heroku**: Log into your Heroku account and go to your app’s **Settings** section. Click **Reveal Config Vars** to view and manage environment variables. Add a new Config Var named `CLOUDINARY_URL` and paste the value you copied from Cloudinary, making sure to remove the "CLOUDINARY_URL=" prefix before saving.
+
+4. **Prepare for Local Deployment**: To run the application locally, add the `CLOUDINARY_URL` and its value to your `env.py` file, allowing your application to utilize Cloudinary while running on localhost.
+
+### Cloudinary Media Upload Dashboard
+*Access your Cloudinary dashboard for managing media uploads and configurations.*
+
+<details>
+<summary> Cloudinary Media Upload Interface</summary>
+<img src="static/images/media-library.png"  width="1000">
+</details>
+
+### Link the Heroku App to the GitHub Repository
+
+1. Go to the "Deploy" tab on your Heroku application configuration page.
+
+2. Select GitHub as your deployment method. If necessary, confirm the connection between Heroku and GitHub.
+
+3. In the search field, type the name of your GitHub repository (for this project, it’s **sell-cycle**) and click **Connect** to associate the Heroku app with your repository.
+
+4. Scroll down to the deployment options. You can choose to enable **Automatic Deploys** (which redeploys the app whenever changes are pushed to GitHub) or select **Manual Deploy** for on-demand deployments. This project uses manual deployment.
+
+5. To launch the application, return to the application configuration page and click the **Open App** button.
+
+<details>
+<summary>Connecting the GitHub Repository to the Heroku App</summary>
+<img src="static/images/herokuu.png"  width="1000">
+</details>
+
+
+### Final Deployment Steps
+
+Once you have completed and tested your code changes on localhost, follow these steps to prepare your application for deployment on Heroku:
+
+1. **Set the DEBUG Flag:** Change the DEBUG setting to False in `settings.py`.
+
+
+2. **Update requirements.txt:** Run the command `pip3 freeze --local > requirements.txt` to ensure that your requirements file is current.
+
+3. **Push Changes to GitHub:** Commit and push your updated files to GitHub.
+
+4. **Collect Static Files:** Before final deployment, run `python3 manage.py collectstatic` to gather all the latest static files, since the DISABLE_STATIC variable has been removed on Heroku.
+
+5. **Deploy on Heroku:** Go to the Deploy tab on the Heroku dashboard for your application and click on "Deploy Branch."
+
+Throughout this process, the Code Institute's "Django Blog Cheat Sheet" served as an essential resource for installing and configuring frameworks and libraries, setting up the database management system (DBMS), and preparing the application for deployment.
+
+You can access the live application here: [SellCycle](https://sell-app-cycle-f7894996863d.herokuapp.com/).
+
+
+### Media
+
+For icons, I utilized [Font Awesome](https://fontawesome.com), which includes social media links in the footer for platforms like [GitHub](https://github.com), [LinkedIn](https://www.linkedin.com), and [Twitter](https://twitter.com).
+
+The application's favicon logo was created using [Favicon.io](https://favicon.io).
+
+The project mockup was designed with [Am I Responsive?](http://ami.responsivedesign.is).
+
+
+### Credits
+
+- This README was adapted from the structure provided in [this repository](https://github.com/elainebroche-dev/pf4-wayfarers-guided-hikes/blob/main/README.md) as well as (https://github.com/TerenceTamuka/handy-man-services-fullstack-project)
+
+- **ChatGPT**: This AI tool assisted in generating ideas for the project website and provided coding ideas to enhance the app's functionality.
+
+- **Codemy.com** and **https://www.youtube.com/watch?v=YZvRrldjf1Y&t=865s:** I watched several Django tutorials on this channel, which greatly contributed to my development process.
+
+- **Net Ninja**: This channel helped clarify key concepts related to templates, forms, and models used in this project.
