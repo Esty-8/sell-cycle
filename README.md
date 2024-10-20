@@ -302,7 +302,7 @@ The User Stories in the User Experience (UX) section of this document are number
 
 <details>
 <summary>Traceability Matrix Graphic</summary>
-<img src="static/images/"  width="600">
+<img src="static/images/d"  width="600">
 </details>
 
 
@@ -348,14 +348,53 @@ The User Stories in the User Experience (UX) section of this document are number
 ## Entity-Relationship Diagram (ERD)
 
 <details>
-<summary></summary>
-<img src="static/images/"  width="600">
+<summary>ER diagram:</summary>
+<img src="static/images/diagram.png"  width="600">
 </details>
 
-Entities:
 
+### Notes on the ER diagrams :
 - User: Represents the customer who adds the items. This is a foreign key referencing Django's built-in User model.
+- Listing: Represents different categories available for selling an item, such as "Women", "Mens", and "Kids". Each item has attributes such as:
 
+  - category: The type of item being sold.
+  - price: The cost of the item.
+  - description: Details about the item.
+  - featured_image: Image associated with the item.
+  - image: An optional image 
+- Product: Represents a product available for sale. Key attributes include:
+  - category: Links the product to a specific category using a foreign key.
+  - name: The name of the product.
+  - featured_image: An optional image associated with the product, uploaded using Cloudinary.
+  - description: Details about the product; this can be blank or null if no description is provided.
+  - image: An additional optional image for the product, also uploaded using Cloudinary.
+  - price: The cost of the product.
+  - is_sold: A boolean indicating whether the product has been sold.
+  - created_at: Automatically set to the current date and time when the product is created.
+  - created_by: Links the product to the user who created it using a foreign key.
+
+- Relationships
+   - User to Product: This is a one-to-many relationship. A user can create multiple products, but each product is associated with one user.
+
+   - Category to Product: This is a one-to-many relationship. A category can have multiple products, but each product belongs to one category.
+   Product to Category: one-to-many . Each product is linked to one category via the category foreign key. A single category can have multiple products associated with it. This relationship helps organize products, allowing users to filter and browse items by category. The related_name='products' allows for easy access to all products in a specific category.
+  
+   - Product to User: one-to-many relathionship. Each product is associated with one user through the created_by foreign key. A user can create multiple products, but each product belongs to a single user. This relationship enables users to manage their own products. The related_name='products' allows access to all products created by a specific user.
+
+
+- Benefits of This Structure
+  - Organization: The relationships and unique constraints create a well-structured database. This organization allows for efficient querying and management of products.
+
+  - Data Integrity: The unique constraint prevents duplicates, ensuring that the product catalog remains clear and easy to navigate.
+  The foreign key relationships ensure that the database remains consistent, as deleting a category or user also cleans up associated products.
+
+  - User Management: Linking products to users allows for personalized experiences where users can manage their own products and view their inventory.
+
+  - Foreign Key Constraints:
+
+Description: The foreign keys (category and created_by) ensure that each product must be associated with a valid category and user. If a category or user is deleted, all associated products will also be deleted due to on_delete=models.CASCADE. This maintains referential integrity in the database. Ensures that a product cannot exist without a valid category and creator, preventing orphaned records.
+
+The Product model effectively manages relationships and constraints to ensure data integrity and usability within the application. By linking products to categories and users, it provides a structured way to handle inventory while maintaining referential integrity.
 ## Technologies Used
 
 ### Languages Used
@@ -396,16 +435,42 @@ You can access the Epic, User Stories, and Kanban board here: [Kanban Board](htt
 
 - HTML Validation
 
-Since this project utilizes Django templates, the HTML has been validated by manually executing the application pages, copying the source of the rendered pages, and then validating this version of the HTML using the [W3C Validator](https://validator.w3.org). The HTML for the Django admin site pages was not edited, so it has not been validated here. The Signup/Registration form, Login, and Logout pages from Django Allauth were remodeled and have been validated, with results provided below.
+Since this project utilizes Django templates, the HTML has been validated by manually executing the application pages, copying the source of the rendered pages, and then validating this version of the HTML using the [W3C Validator](https://validator.w3.org). The HTML for the Django admin site pages was not edited, so it has not been validated here. The Signup/Registration form, Login, and Logout pages from Django Allauth were remodeled and have been validated, with results provided below.There were a few  issues encountered during the validatotion process which didn't resulted in the code not fully validated.
+
+<details>
+<summary> Validation result for foundation.html
+</summary>
+<img src="static/images/foundation.png"  width="600">
+</details>
+
+<details>
+<summary>Validation result for login.html</summary>
+<img src="static/images/login.png"  width="600">
+</details>
+
+<details>
+<summary>Validation resign for Sign In Page </summary>
+<img src="static/images/signup.png"  width="600">
+</details>
 
 
-- Validation result for index.html
-- Validation result for Signup form page
-- Validation resign for Sign In Page
-- Validation result for Add Page
-- Validation result for Catalogue  Page
-- Validation result for Browse Page
-- Validation result for Inbox Page
+<details>
+<summary> Validation result for Catalogue  Page</summary>
+<img src="static/images/products.png"  width="600">
+</details>
+
+
+<details>
+<summary> Validation result for Browse Page</summary>
+<img src="static/images/b.png"  width="600">
+</details>
+
+<details>
+<summary>Validation result for Inbox Page</summary>
+<img src="static/images/inbox.png"  width="600">
+</details>
+
+
 
 
 
