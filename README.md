@@ -81,16 +81,35 @@ I've used Balsamiq to design my site wireframes.
 <img src="static/images/catal.png"  width="600">
 <summary>Browse Page</summary>
 <img src="static/images/myproducts.png"  width="600">
+<summary>Seller's Page</summary>
+<img src="static/images/seller.png"  width="600">
 </details>
 
 ### Tablet Wireframes
 
-<details>
 
-<summary>
-Click here to see the Tablet Wireframes
-</summary>
+
+<details>
+  <summary>Click here to see the Tablet Wireframes</summary>
+  <h2>Seller's Page</h2>
+  <img src="static/images/tablet-seller.png" >
+
+  <summary>
+  <h2>Catalogue Page</h2>
+  <img src="static/images/tablet.png"  >
+
+  <summary>
+  <h2>Main Page</h2>
+  <img src="static/images/front-page.png" >
+
+   <summary>
+  <h2>Login Page</h2>
+  <img src="static/images/sign.png" >
+  <summary>
+  <h2>SignUp Page</h2>
+  <img src="static/images/signupp.png" >
 </details>
+
 
 
 ## Mobile Wireframes
