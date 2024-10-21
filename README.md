@@ -115,11 +115,23 @@ I've used Balsamiq to design my site wireframes.
 ## Mobile Wireframes
 
 <details>
+  <summary>Click here to see the Mobile Wireframes</summary>
+  
+  <div>
+    <h2>Front Page</h2>
+    <img src="static/images/Scr0.png" alt="Sign In Wireframe" />
+  </div>
 
-<summary>
-Click here to see the Mobile Wireframes
-</summary>
-
+  <div>
+    <h2>Sign In Page</h2>
+    <img src="static/images/signin.png" alt="Sign In Wireframe" />
+  </div>
+  
+  <div>
+    <h2>Sign Up Page</h2>
+    <img src="static/images/Scren.png" alt="Sign Up Wireframe" />
+  </div>
+  
 </details>
 
 
@@ -768,3 +780,6 @@ The project mockup was designed with [Am I Responsive?](http://ami.responsivedes
 - **[Codemy](Codemy.com)** and **[freeCodeCamp](https://www.youtube.com/watch?v=YZvRrldjf1Y&t=865s:)** I watched several Django tutorials on this channel, which greatly contributed to my development process.
 
 - **[Net Ninja](https://www.youtube.com/watch?v=wQPaXedytlg&t=174s)**: This channel helped clarify key concepts related to templates, forms, and models used in this project.
+- ### Credit for Images
+
+All images used in this project are sourced from [Unsplash](https://unsplash.com/), and are used for free under their generous licensing terms. 
