@@ -18,7 +18,7 @@ def products(request):
 
 def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
-    return render(request, 'product/detail.html', {
+    return render(request, 'product/information.html', {
         'product': product
     })
 
@@ -29,6 +29,10 @@ def product_information(request, pk):
     return render(request, 'product/information.html', {
         'product': product
     })
+
+
+
+
 
 @login_required  # Ensures the user is logged in before accessing this view
 def new_product(request):

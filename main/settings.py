@@ -38,9 +38,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-esty8-sellcycle-14u8qmdo4n7.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-esty8-sellcycle-8k00s2pwri0.ws.codeinstitute-ide.net',
+                 
                  '.herokuapp.com'
 ]
 
