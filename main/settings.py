@@ -41,7 +41,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-esty8-sellcycle-8k00s2pwri0.ws.codeinstitute-ide.net',
-                 
+
                  '.herokuapp.com'
 ]
 
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'cloudinary',
+    'crispy_forms',
     'sell',
     'product',
     'catalogue',
@@ -129,7 +130,7 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-esty8-sellcycle-14u8qmdo4n7.ws.codeinstitute-ide.net', 
+    'https://8000-esty8-sellcycle-8k00s2pwri0.ws.codeinstitute-ide.net', 
     'https://8000-esty8-sellcycle-4zqs8fxqllc.ws-eu116.gitpod.io',  # Gitpod URL
     'https://sell-app-cycle-f7894996863d.herokuapp.com',  # Heroku app URL
 ]
