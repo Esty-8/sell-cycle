@@ -40,7 +40,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-esty8-sellcycle-8k00s2pwri0.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-esty8-sellcycle-y04ttjrhh55.ws.codeinstitute-ide.net',
 
                  '.herokuapp.com'
 ]
@@ -131,6 +131,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-esty8-sellcycle-8k00s2pwri0.ws.codeinstitute-ide.net', 
+    'https://8000-esty8-sellcycle-y04ttjrhh55.ws.codeinstitute-ide.net',
     'https://8000-esty8-sellcycle-4zqs8fxqllc.ws-eu116.gitpod.io',  # Gitpod URL
     'https://sell-app-cycle-f7894996863d.herokuapp.com',  # Heroku app URL
 ]
@@ -172,7 +173,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/' 

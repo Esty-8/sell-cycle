@@ -6,7 +6,7 @@
 {% block content %}
 
 <div class="container">
-    <div class="col align-items-start">
+    <div class="col ms-3"> <!-- Added ms-3 to move it to the right -->
         <div class="col">
             {% if products %}
                 {% for product in products %}
@@ -44,6 +44,7 @@
     </div>
 </div>
 
+<!-- container for the categories -->
 <div class="container mt-4">
     <h2 class="text-center mb-4">Categories</h2>
     <div class="row">

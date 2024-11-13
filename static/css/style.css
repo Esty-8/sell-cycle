@@ -5,7 +5,7 @@ html, body {
 
 
 body {
-    background-color: #fde0fa;
+    background-color: #b8c9f5;
 }
 
 .wrapper {
@@ -60,14 +60,14 @@ body {
 
 /* Customizing form background and inputs */
 .container {
-    background-color: #f0f8ff; /* Baby blue background for the container */
+    background-color: #c3dff8; /* Baby blue background for the container */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .form-control {
-    border: 1px solid #ffb6c1; /* Pastel pink borders for inputs */
+    border: 1px solid #fcc6ce; /* Pastel pink borders for inputs */
     background-color: #ffe4e1; /* Light pastel pink background for inputs */
     color: #333; /* Dark text for readability */
   }
@@ -87,3 +87,4 @@ body {
     color: #721c24;
     border-color: #f5c6cb;
   }
+
