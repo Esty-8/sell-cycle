@@ -23,52 +23,101 @@ It offers users a convenient way to declutter their closets, discover fantastic 
 7. [Deployment](#deployment)
 8. [Credits](#credits)
 
-# User Experience(UX)
 
- ### User stories :
+# User Stories
 
-*  Navigate site
-- As a **Site User** I can **view the item listed** so that **I can easily access application functionality**
-    - Acceptance criteria: Given that I am a site user,
-When I navigate to the catalogue page, I see a list of items displayed with clear titles, images, and brief descriptions for each item, ensuring that I can identify them easily.
+# User Stories
 
-*  View products list
-- As a **Site User** I can **view a list of products** so that **I can select one to access more details or purchase**
-   - Given that I have viewed the list of products,When I click on a product,Then I should be redirected to that product's detail page, where I can view more information and message the seller.
+## 1. As a **Site User**, I can **view the items listed** so that **I can easily access application functionality.**
+- **Acceptance Criteria:**
+    - Given I am a site user,  
+    - When I navigate to the catalogue page,  
+    - Then I should see a list of items displayed with **clear titles**, **images**, and **brief descriptions** for each item, making them easy to identify and browse.
 
-*  View the categories section
-- As a **Site User** I can **access a list of categories** of items.
-  - Given that I am a site user,
-When I navigate to the main page I can see the categories.
-Then I should see a list of item categories with clear titles for easy identification and selection.
+---
 
- 
-- As a **registered Site User** I can **delete** or **edit** a listed item. The user can select a product to edit
-*  Delete/Edit a product listed
-   - As site user I can view listed item, When I select "Edit,"
-Then I should be redirected to a form to modify the item's details. Delete Item:Given I am viewing a listed item,When I select "Delete,"the item should be removed from the list.
+## 2. As a **Site User**, I can **view a list of products** so that **I can select one to access more details or purchase.**
+- **Acceptance Criteria:**
+    - Given I have viewed the list of products,  
+    - When I click on a product,  
+    - Then I should be redirected to that product's **detail page**, where I can view more information about the product and contact the seller if needed.
 
-*  Contact seller
-- As a **registered site sser** I can **contact the seller** so that **I can give ask for more information**
-  - As a **site user** I can navigate to the inbox page where I can see messages from seller and when I click I can leave messages myself to the seller
-*  View past conversations
-- As a **Site User** I can **view past conversations** so that I can stay in contact**with the customers**
-  - As a registred site userI can navigate to the inbox page where I can see past conversations from the seller
-*  Account registration and login
-- As a **registered site user** I can **add item and description**of the product  **that I want to sell**
-  - As a site user I can navigate to the page Add items and add items
-* Catalogue
-- As a **Site User** I can **access a catalogue of products** so that **I can see products I have previously added**
-  - As a site user I can navigate to the Catalogue page and see the products added.
-* Access Catalogue
-- As a **registered site user** I can **I can access a catalogue of products so that I can see products I have previously added.**
-*  Create Read Update Delete
-- As a **registred site user** I can **create, read, update, delete** so that I can manage site content and availability.
-* Registered for an Account 
-   - As a **new user**, I can easily create an account to access all features and functionalities of the site.
-* Admin
-- As a Site Admin, I can **add** items and images so that I can manage site content efectively and ensure a diverse range of products is available for users to browse and purchase.
-  - Given that I am a Site Admin, When I navigate to the item admin I should see an "Add New Item" button that allows me to access the item creation form.
+---
+
+## 3. As a **Site User**, I can **access a list of categories** of items.
+- **Acceptance Criteria:**
+    - Given I am a site user,  
+    - When I navigate to the main page,  
+    - Then I should see a list of item categories with **clear titles** and an **easy-to-use selection mechanism**.
+
+---
+
+## 4. As a **Registered Site User**, I can **delete or edit a listed item** so that **I can manage my listed products.**
+- **Acceptance Criteria:**
+    - Given I am viewing a listed item,  
+    - When I select "Edit,"  
+    - Then I should be redirected to an **edit form** where I can modify the item's details.  
+    - Given I am viewing a listed item,  
+    - When I select "Delete,"  
+    - Then the item should be **permanently removed** from the list.
+
+---
+
+## 5. As a **Registered Site User**, I can **contact the seller** so that **I can ask for more information.**
+- **Acceptance Criteria:**
+    - Given I am a site user,  
+    - When I navigate to the inbox page,  
+    - Then I should be able to see **messages from the seller**, and I should have the ability to send messages to the seller.
+
+---
+
+## 6. As a **Site User**, I can **view past conversations** so that **I can stay in contact with the seller.**
+- **Acceptance Criteria:**
+    - Given I am a registered site user,  
+    - When I navigate to the inbox page,  
+    - Then I should see **past conversations** with the seller, organized by date for easy reference.
+
+---
+
+## 7. As a **Registered Site User**, I can **add an item and description** of the product that I want to sell.
+- **Acceptance Criteria:**
+    - Given I am a registered site user,  
+    - When I navigate to the "Add Item" page,  
+    - Then I should be able to enter a **name**, **description**, and **image** for the item I want to sell, and submit it for listing.
+
+---
+
+## 8. As a **Site User**, I can **access a catalogue of products** so that **I can see products I have previously added.**
+- **Acceptance Criteria:**
+    - Given I am a site user,  
+    - When I navigate to the catalogue page,  
+    - Then I should see a list of **products I have previously added**.
+
+---
+
+## 9. As a **Registered Site User**, I can **create, read, update, and delete** items so that **I can manage the site content and availability.**
+- **Acceptance Criteria:**
+    - Given I am a registered site user,  
+    - When I create, read, update, or delete an item,  
+    - Then I should be able to **manage the content and availability** of my items on the site.
+
+---
+
+## 10. As a **New User**, I can **easily create an account** to access all features and functionalities of the site.
+- **Acceptance Criteria:**
+    - Given I am a new user,  
+    - When I visit the site,  
+    - Then I should be able to **easily register** for an account and gain access to the site’s features and functionality.
+
+---
+
+## 11. As a **Site Admin**, I can **add items and images** so that **I can manage site content effectively** and ensure a diverse range of products is available for users to browse and purchase.
+- **Acceptance Criteria:**
+    - Given I am a Site Admin,  
+    - When I navigate to the item admin section,  
+    - Then I should see an **"Add New Item"** button that allows me to create new items and upload images for them.
+
+---
 
 ## Wireframes
 
@@ -303,7 +352,7 @@ Non-technical users, such as business managers and customer service representati
 ### SellCycle: Admin Functionality for Managing Listings
 
 The admin user can add and publish items through the admin pages of SellCycle. These pages are accessible either by appending '/admin' to the application URL or by signing in and clicking the Admin link, which appears in the navigation bar only when the admin is logged in.
-To add a new item, the admin can click the "+ Add" link next to the table name and then fill in the required data fields. A rich text editor (Summernote) is provided for the item description, allowing for easy formatting. If the admin user does not upload an image, a default image will be used for the item. This functionality streamlines the process of managing listings and ensures a consistent presentation on the platform.
+To add a new item, the admin can click the "+ Add" link next to the table name and then fill in the required data fields.  If the admin user does not upload an image, a default image will be used for the item. This functionality streamlines the process of managing listings and ensures a consistent presentation on the platform.
 
 <details>
 <summary>User interactions managed through the Django admin panel</summary>
@@ -476,7 +525,6 @@ The Product model effectively manages relationships and constraints to ensure da
 - **dj_database_url:** A library that simplifies the connection to PostgreSQL databases through URL configuration.
 - **psycopg2:** The database adapter that enables communication with PostgreSQL databases.
 - **Cloudinary:** Utilized for storing and managing images used throughout the application.
-- **Summernote:** Integrated for rich text editing capabilities in the "ADDITIONAL TEXT" field when users create or edit bookings.
 - **Django Allauth:** Employed to manage user registration and authentication processes effectively.
 - **Django Crispy Forms:** Facilitates cleaner and more efficient form rendering.
 - **jQuery:** Utilized to enhance user interactions by fading out alert messages smoothly.
